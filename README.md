@@ -1,6 +1,6 @@
 second-layout
 =============
 
-second page
+second page view
 
 ![](<layout/index.jpg>)

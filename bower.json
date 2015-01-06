@@ -1,0 +1,19 @@
+{
+  "name": "second-layout",
+  "version": "0.0.1",
+  "authors": [
+    "miksmile <miksmile@gmail.com>"
+  ],
+  "dependencies": {
+    "fontawesome": "latest",
+    "normalize.css": "~3.0.2"
+  },
+  "license": "Apache License 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

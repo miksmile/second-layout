@@ -1,0 +1,225 @@
+grey = #919191
+greyDark = #484848
+greyDarken = #373737
+greyIcons = #313131
+greyLight = #e2e2e2
+blue = #44a7ec
+red = #ec4444
+
+mainFont = Arial, sans-serif
+headerFont = 'Trebuchet MS', sans-serif
+twitFont = Tahoma, sans-serif
+
+body
+	background white
+	font-family mainFont
+	font-size 12px
+	color grey
+h1
+	font-family headerFont
+	font-size 80px
+	color red
+	letter-spacing -3.3px
+h2
+	font-family headerFont
+	color greyDarken
+	font-size 50px
+	letter-spacing -2px
+h3
+	font-family headerFont
+	color blue
+	font-size 24px
+h4
+	font-family headerFont
+	color blue
+	font-size 20px
+a
+	color blue
+	text-decoration underline
+	&:hover
+		text-decoration none
+		color darken(blue, 30%)
+
+.container
+	width 960px
+	margin 0 auto
+.section
+	width 100%
+	border-top 1px dashed  greyLight
+.row:after
+	content ''
+	display block
+	clear both
+.col
+	float left
+	width 50%
+.col--left
+	margin-right 10px
+.col--right
+	margin-left 10px
+
+.header
+	height 40px
+	background greyDark
+	font-family mainFont
+	color grey
+	font-size 11px
+	text-transform uppercase
+	.container *
+		display inline-block
+	.header-nav
+		a
+			margin 0 17px 0 0
+			padding 11px 0 9px 0
+			line-height 20px
+			color grey
+			text-decoration none
+			&:hover
+				text-decoration underline
+				color lighten(grey, 30%)
+	.header-login
+		float right
+		span
+			padding 11px 0 9px 0
+			margin 0 10px 0 0
+			line-height 20px
+		input
+			// height 23px
+			// margin 9px 5px 8px 0
+			// padding 0
+			// font-size 10px
+			// border none
+			// color black
+		button
+			// height 23px
+			// width 35px
+			// margin 8px 0 8px 0
+			// padding 0
+			// border none
+			// color black
+.main
+	margin-bottom 65px
+	.logo
+		width 214px
+		height 54px
+		margin-top 13px
+		margin-bottom 13px
+	.menu
+		height 40px
+		background greyLight
+		font-size 11px
+		color grey;
+		text-transform uppercase
+		*
+			display inline-block
+		.menu-nav
+			float left
+			a
+				// transition-duration: 0.2s
+				// transition-delay: 0.5s
+				text-transform uppercase
+				display inline-block
+				color greyDarken
+				text-decoration none
+				line-height 20px
+				padding 11px 16px 9px 13px
+				text-shadow 0px 1px 0px rgba(255,255,255,0.75)
+				border-left 1px solid lighten(greyLight, 30%)
+				border-right 1px solid darken(greyLight, 8%)
+				font-size 12px
+				&:hover
+					background lighten(greyLight, 80%)
+					color lighten(greyDarken, 30%)
+		.menu-search
+			float right
+			padding 10px 0 //tmp
+			input
+				//
+			button
+				//
+	.app
+		background url('../images/logo-big.png') 100% 0% no-repeat
+		li
+			font-family headerFont
+			color grey
+			margin-left 45px
+			line-height 20px
+			font-size 16px
+			letter-spacing -0.5px
+			&:before
+				content '•'
+				margin-top -1px
+				font-size 20px
+				color blue
+				position absolute
+				margin-left -20px
+		.app-appstore
+			margin-top 39px
+			margin-left 13px
+.product
+		float left
+		width 25%
+.products
+	margin-bottom 52px
+
+	.products-item
+		margin 0 10px 0 10px
+		border 1px solid greyLight
+		border-radius 5px
+		padding 8px 80px 18px 8px
+		p
+			margin-top 10px
+			line-height 20px
+		img
+			position absolute
+			margin-left 130px
+			margin-top -10px
+			z-index 1
+.blog
+	//
+
+
+
+
+.footer
+	background greyDark
+	.footer-copy
+		display inline-block
+		font-family twitFont
+		font-size 12px
+		line-height 20px
+		margin 25px 0
+		color grey
+		a
+			display inline
+			color grey
+			text-decoration underline
+			&:hover
+				text-decoration none
+				color blue
+	.footer-icons
+		float right
+		margin 19px 0 0 0
+		i
+			margin-left 15px
+			text-shadow 1px 1px 1px rgba(255,255,255,0.05)
+			background darken(greyIcons, 40%)
+			color transparent
+			-webkit-background-clip text
+			-moz-background-clip text
+			background-clip text
+			&:hover
+				color blue
+
+
+// .header
+// .main
+// .logo
+// .menu
+// .app
+// .footer
+// .section
+	// display none
+
+*
+	// outline 1px solid olive

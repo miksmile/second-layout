@@ -1,0 +1,160 @@
+doctype html
+html
+	include src/head.jade
+	body
+		.header
+			.container
+				.header-nav
+					a(href='#') about us
+					a(href='#') privacy
+					a(href='#') terms
+					a(href='#') contact
+				.header-login
+					span client login
+					form
+						input(type='text' name='username' value='Username')
+						input(type='text' name='password' value='Password')
+						button Go
+		.main
+			.container
+				.logo
+					img(src='images/logo.png')
+				.menu
+					.menu-nav
+						a(href='#') company
+						a(href='#') products
+						a(href='#') services
+						a(href='#') support
+						a(href='#') partners
+						a(href='#') blog
+					.menu-search
+						form
+							input(type='text' value='Search our site...')
+							button search
+				.app
+					h1 myTweetz v2.0
+					ul
+						li Lorem ipsum dolor sit amet, consectetur adipisicing elit
+						li Tempor incididunt ut labore et dolore magna aliqua
+						li Quis nostrud exercitation ullamco laboris nisi ut aliquip
+						li Consequat. Duis aute irure dolor in reprehenderit in voluptate
+						li Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+					.app-appstore
+						a(href='#')
+							img(src='images/appstore.png')
+		.section
+			.container
+				.products.row
+					h2 Products
+					.product
+						.products-item
+							img(src='images/ipad.png')
+							h4 iPhone &amp; Ipad Apps
+							p Lorem ipsum dolor sit amet.dolor sit amet.
+					.product
+						.products-item
+							img(src='images/bb.png')
+							h4 Blackberry Apps
+							p Lorem ipsum dolor sit amet.dolor sit amet.
+					.product
+						.products-item
+							img(src='images/wp.png')
+							h4 Windows Phone Apps
+							p Lorem ipsum dolor sit amet.dolor sit amet.
+					.product
+						.products-item
+							img(src='images/pc.png')
+							h4 Windows PC Apps
+							p Lorem ipsum dolor sit amet.dolor sit amet.
+		.section
+			.container.row
+				.blog
+					h2 From our blog
+					.col
+						.col--left
+							h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							p
+								| 06/16/2012 by&nbsp;
+								a(href='#') Lorem Ipsum
+								| &nbsp;in&nbsp;
+								a(href='#') Products
+							img(src='images/blog-1.png')
+							p
+								| sed do eiusmod tempor incididunt ut lab
+								| ore et dolore magna aliqua.
+								| Ut enim ad minim veniam, quis nostrud e
+								| xercitation ullamco laboris nisi ut
+								| aliquip ex ea commodo consequat. Duis a
+								| ute irure dolor in reprehenderit in
+								| voluptate velit esse
+					.col
+						.col--right
+							h3 Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+							p
+								| 06/15/2012 by a&nbsp;
+								a(href='#') First Lastname
+								| &nbsp;in&nbsp;
+								a(href='#') Company
+							img(src='images/blog-2.png')
+							p
+								| Lorem ipsum dolor sit amet, consectetur
+								| adipisicing elit, sed do eiusmod
+								| tempor incididunt ut labore et dolore ma
+								| gna aliqua. Ut enim ad minim veniam,
+								| quis nostrud exercitation ullamco labori
+								| s nisi ut aliquip ex ea commodo
+		.section
+			.container.row
+				.col
+					.col--left
+						h2 About us
+						p
+							| Lorem ipsum dolor sit amet, consectetur
+							| adipisicing elit, sed do eiusmod
+							| tempor incididunt ut labore et dolore ma
+							| gna aliqua. Ut enim ad minim veniam,
+							| quis nostrud exercitation ullamco labori
+							| s nisi ut aliquip ex ea commodo
+							| consequat. Duis aute irure dolor in repr
+							| ehenderit in voluptate velit esse
+							| cillum dolore eu fugiat nulla pariatur.
+							| Excepteur sint occaecat cupidatat non
+							| proident, sunt in culpa qui officia dese
+							| runt mollit anim id est laborum.
+						a(href='#') Read more
+				.col
+					.col--right
+						h2 Twitter feed
+						.twit
+							a(href='#') 1 hour ago
+							p
+								| Lorem ipsum dolor sit amet, co
+								| nsectetur adipisicing elit, sed
+								| do eiusmod tempor incididunt u
+								| t labore et dolore magna aliqua.
+						.twit
+							a(href='#') 06/21/2012
+							p
+								| Ut enim ad minim veniam, qu
+								| is nostrud exercitation ullamco
+								| laboris nisi ut aliquip ex
+								| ea commodo
+						.twit
+							a(href='#') 06/19/2012
+							p
+								| Excepteur sint occaecat cupida
+								| tat non proident,
+								| sunt in culpa qui officia dese
+								| runt mollit anim id est laborum.
+		.footer
+			.container
+				.footer-copy
+					| Copyright © 2012 SomeCorp. All rights Reserved. | &nbsp;
+					a(href='#') Disclaimer
+					| &nbsp;&amp;&nbsp;
+					a(href='#') Privacy Policy
+				.footer-icons
+					a(href='#'): <i class='fa fa-twitter-square fa-2x'></i>
+					a(href='#'): <i class='fa fa-facebook-square fa-2x'></i>
+					a(href='#'): <i class='fa fa-lastfm-square fa-2x'></i>
+					a(href='#'): <i class='fa fa-vimeo-square fa-2x'></i>

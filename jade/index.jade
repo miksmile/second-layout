@@ -22,9 +22,9 @@ html
 						li.b-nav__item
 							a.b-nav__item__link.b-nav__item__link--menu(href='javascript:void(0)')= val
 				form.b-search
-					input.b-search__query(type='text' placeholder='Search our site...')
 					button.b-search__button(type='button' name='search')
 						i.fa.fa-search
+					input.b-search__query(type='text' placeholder='Search our site...')
 
 			.b-app
 				img.b-app__logo-big(src='images/logo-big.png')
@@ -42,7 +42,7 @@ html
 				h2.b-heading
 					a.b-heading__link.i-h2(href='javascript:void(0)') Products
 				.b-col4
-					.b-product
+					.b-product.b-product--first
 						img.b-product__img(src='images/ipad.png' alt='ipad')
 						h4.b-heading
 							a.b-heading__link.i-h4(href='javascript:void(0)') iPhone &amp; Ipad Apps
@@ -60,7 +60,7 @@ html
 							a.b-heading__link.i-h4(href='javascript:void(0)') Windows Phone Apps
 						p.b-product__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
 				.b-col4
-					.b-product
+					.b-product.b-product--last
 						img.b-product__img(src='images/pc.png' alt='pc')
 						h4.b-heading
 							a.b-heading__link.i-h4(href='javascript:void(0)') Windows PC Apps
@@ -71,7 +71,7 @@ html
 				h2.b-heading
 					a.b-heading__link.i-h2(href='javascript:void(0)') From our blog
 				.b-col2
-					.b-blog.i-col2--left
+					.b-blog.b-col2--left
 						h3.b-heading
 							a.b-heading__link.i-h3(href='javascript:void(0)') Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 						p.b-blog__info
@@ -92,7 +92,7 @@ html
 							aliquip ex ea commodo consequat. Duis a
 
 				.b-col2
-					.b-blog.i-col2--right
+					.b-blog.b-col2--right
 						h3.b-heading
 							a.b-heading__link.i-h3(href='javascript:void(0)') Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 						p.b-blog__info
@@ -115,7 +115,7 @@ html
 			.b-delimiter
 			.b-section.i-row
 				.b-col2
-					.b-about-us.i-col2--left
+					.b-about-us.b-col2--left
 						h2.b-heading
 							a.b-heading__link.i-h2(href='javascript:void(0)') About us
 						p.b-about-us__text.
@@ -133,7 +133,7 @@ html
 							runt mollit anim id est laborum.
 						a.b-about-us__link(href='javascript:void(0)') Read more
 				.b-col2
-					.i-col2--right
+					.b-col2--right
 						h2.b-heading
 							a.b-heading__link.i-h2(href='javascript:void(0)') Twitter feed
 						.b-twit

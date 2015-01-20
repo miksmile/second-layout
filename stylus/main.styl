@@ -4,7 +4,7 @@ h2 = #484848
 h4 = #44a7ec
 h3 = #44a7ec
 link = #44a7ec
-icon = #313131
+icon = #222
 menu = #e2e2e2
 delimiter = #cccccc
 footer = #484848
@@ -19,7 +19,8 @@ twitterFont = Tahoma, sans-serif
 	// outline 1px solid olive
 
 .b-container
-	width 960px
+	min-width 960px
+	width 80%
 	margin 0 auto
 .b-delimiter
 	position absolute
@@ -33,19 +34,17 @@ twitterFont = Tahoma, sans-serif
 .b-col2
 	float left
 	width 50%
+	&--left
+		margin-right 10px
+	&--right
+		margin-left 10px
 .b-col4
 	float left
 	width 25%
-.i-col2--left
-	margin-right 10px
-.i-col2--right
-	margin-left 10px
 .i-h1
 	font-size 80px
 	letter-spacing -3px
 	color h1
-	// outline 1px solid olive
-	// border 1px solid red
 .i-h2
 	font-size 50px
 	letter-spacing -2px
@@ -54,7 +53,6 @@ twitterFont = Tahoma, sans-serif
 		color lighten(dark, 50%)
 .i-h3
 	font-size 24px
-
 .i-h4
 	font-size 20px
 .i-h3
@@ -79,6 +77,7 @@ twitterFont = Tahoma, sans-serif
 .b-nav
 	height 40px
 	float left
+	cursor pointer
 	&--social
 		float right
 	&__item
@@ -105,19 +104,13 @@ twitterFont = Tahoma, sans-serif
 				&:hover
 					background lighten(menu, 50%)
 			&--social
-				margin 0 0 0 10px
+				margin 15px 0 0 10px
 				i
-					font-size 50px
-					color transparent
-					background-color black
+					font-size 40px
+					color icon
 					text-shadow 1px 1px 0px rgba(footer, 0.5)
-					-webkit-background-clip text
-					-moz-background-clip text
-					background-clip text
 					&:hover
 						color link
-						text-shadow 1px 1px 0px rgba(black, 0.5)
-						background-color white
 
 .b-login
 	margin-top 9px
@@ -142,6 +135,7 @@ twitterFont = Tahoma, sans-serif
 		&::-webkit-input-placeholder
 			color #666
 	&__button
+		cursor pointer
 		text-transform uppercase
 		border 0
 		background h1
@@ -182,23 +176,23 @@ twitterFont = Tahoma, sans-serif
 		&::-webkit-input-placeholder
 			color #777
 	&__button
+		cursor pointer
 		background transparent
 		color h1
 		border 0
 		font-size 18px
 		position absolute
 		z-index 1
-		margin-top -25px
+		margin-top 3px
 		margin-left 195px
 		&:hover
-			color red
+			color link
 .b-app
+	position relative
 	margin 70px 15px
-	overflow hidden
 	&__logo-big
 		position absolute
-		overflow hidden
-		right 10%
+		right 0
 		z-index -1
 	&__list
 		margin 15px 0 0 30px
@@ -230,10 +224,16 @@ twitterFont = Tahoma, sans-serif
 .b-section
 	padding 30px 10px
 .b-product
+	min-height 110px
+	position relative
 	border 1px solid lighten(delimiter, 30%)
 	border-radius 5px
 	padding 10px 70px 10px 10px
 	margin 10px
+	&--first
+		margin-left 0
+	&--last
+		margin-right 0
 	&__text
 		margin-top 10px
 		color primary
@@ -243,8 +243,7 @@ twitterFont = Tahoma, sans-serif
 	&__img
 		position absolute
 		z-index 1
-		margin-left 70px
-		margin-top -20px
+		right -20px
 .b-blog
 	margin-top 30px
 	font-family primaryFont
@@ -260,6 +259,7 @@ twitterFont = Tahoma, sans-serif
 				text-decoration none
 	&__img
 		margin-top 15px
+		width 100%
 	&__text
 		line-height 18px
 		margin-top 5px

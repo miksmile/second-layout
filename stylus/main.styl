@@ -1,6 +1,7 @@
 primary = #999999
 h1 = #ec4444
 h2 = #484848
+h4 = #44a7ec
 h3 = #44a7ec
 link = #44a7ec
 icon = #313131
@@ -11,7 +12,7 @@ header = #484848
 dark = #373737
 
 primaryFont = Arial, sans-serif
-headerFont = 'Trebuchet MS', sans-serif
+headingFont = 'Trebuchet MS', sans-serif
 twitterFont = Tahoma, sans-serif
 
 *
@@ -32,173 +33,280 @@ twitterFont = Tahoma, sans-serif
 .b-col2
 	float left
 	width 50%
+.b-col4
+	float left
+	width 25%
 .i-col2--left
 	margin-right 10px
 .i-col2--right
 	margin-left 10px
-.b-col4
-	float left
-	width 25%
+.i-h1
+	font-size 80px
+	letter-spacing -3px
+	color h1
+	// outline 1px solid olive
+	// border 1px solid red
+.i-h2
+	font-size 50px
+	letter-spacing -2px
+	color dark
+	&:hover
+		color lighten(dark, 50%)
+.i-h3
+	font-size 24px
+
+.i-h4
+	font-size 20px
+.i-h3
+.i-h4
+	color link
+	&:hover
+		color lighten(link, 30%)
 
 .b-header
 	&:before
 		content ''
 		position absolute
+		z-index -1
 		left 0
 		right 0
-		height 40px
-		z-index -1
 		background header
-	&__nav
-		display inline-block
-		padding 0
-		margin 0
-		&__item
-			list-style none
-			display inline-block
-			margin-right 13px
-			&__link
-				text-transform uppercase
-				font-size 11px
-				font-family primaryFont
-				color primary
-				text-decoration none
-				display block
-				margin 11px 0 9px 0
-				line-height 20px
-				&:hover
-					text-decoration underline
-
-	&__login
-		display block
-		float right
-		margin 10px 0
-		&__title
-			color primary
-			font-family primaryFont
-			font-size 11px
-			text-transform uppercase
-		&__user
-			border 0
-			color dark
-			font-family primaryFont
-			font-size 11px
-			height 16px
-			margin 0
-			padding 0
-			width 100px
-		&__pass
-			border 0
-			color dark
-			font-family primaryFont
-			font-size 11px
-			height 16px
-			margin 0
-			padding 0
-			width 100px
-		&__button
-			border 0
-			color dark
-			font-family primaryFont
-			font-size 11px
-			height 16px
-			margin 0
-			padding 0
-			width 20px
-
-.b-main
-	&__logo
-		padding 14px 0 19px 0
-	&__menu
 		height 40px
-		background menu
-		&__nav
-			padding 0
-			margin 0
-			display inline-block
-			&__item
-				display inline-block
-				&__link
-					color dark
-					text-decoration none
-					text-transform uppercase
-					font-family primaryFont
-					font-size 12px
-					display block
-					margin 0 13px 0 15px
-					padding 10px 0 10px 0
-					line-height 20px
-					&:hover
-						color primary
-						text-decoration none
-		&__search
-			float right
-			margin 10px 0 0 0
-			&__query
-				height 10px
-				font-size 10px
-				width 150px
-			&__button
-				position absolute
-				margin-top -20px
-				margin-left 130px
-				font-size 10px
-				height 20px
-				width 20px
-	&__app
-		&__header
-			color h1
-			font-family headerFont
-			font-size 50px
-		&__params
-			margin 0
-			padding 0
-			&__item
-				list-style none
-				font-face primaryFont
-				font-size 12px
-				color dark
-		&__link
-			&__img
-				border 0
-.b-products
-	&__header
-		&__link
-			color header
-			font-family headerFont
-			font-size 25px
-			text-decoration none
-			&:hover
-				color lighten(header, 30%)
+	&:after
+		content ''
+		clear both
+		display block
+.b-nav
+	height 40px
+	float left
+	&--social
+		float right
 	&__item
-		padding 10px
-		&__header
-			&__link
-				color link
-				font-family headerFont
-				font-size 20px
-				text-decoration none
-				&:hover
-					color lighten(link, 30%)
-		&__text
+		display inline-block
+		&__link
+			color primary
+			display block
 			font-family primaryFont
-			color dark
-		&__img
-			z-index 1
-.b-blog
-	&__header
-		&__link
-			font-family headerFont
-			color header
+			font-size 11px
 			text-decoration none
-			&:hover
-				color lighten(header, 30%)
+			text-transform uppercase
+			&--header
+				line-height 20px
+				margin 11px 15px 9px 0
+				&:hover
+					color lighten(primary, 30%)
+					text-decoration underline
+			&--menu
+				line-height 20px
+				padding 10px 12px 10px 15px
+				font-size 12px
+				text-shadow 0 1px 0 #fff
+				color dark
+				&:hover
+					background lighten(menu, 50%)
+			&--social
+				margin 0 0 0 10px
+				i
+					font-size 50px
+					color transparent
+					background-color black
+					text-shadow 1px 1px 0px rgba(footer, 0.5)
+					-webkit-background-clip text
+					-moz-background-clip text
+					background-clip text
+					&:hover
+						color link
+						text-shadow 1px 1px 0px rgba(black, 0.5)
+						background-color white
+
+.b-login
+	margin-top 9px
+	float right
+	font-size 11px
+	font-family primaryFont
+	&__title
+		color primary
+		text-transform uppercase
+		margin-right 5px
+	&__input
+		margin-right 5px
+		color primary
+		border 0
+		background dark
+		padding 5px 9px
+		border-radius 4px
+		box-shadow rgba(120,120,120,0.4) 0 1px 0, inset rgba(0,0,0,0.4) 0 1px 0
+		font-size 10px
+		width 80px
+		vertical-align middle
+		&::-webkit-input-placeholder
+			color #666
+	&__button
+		text-transform uppercase
+		border 0
+		background h1
+		padding 4px 9px 3px 9px
+		border-radius 4px
+		box-shadow rgba(0,0,0,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0
+		color #fff
+		font-size 12px
+		vertical-align middle
+		&:hover
+			background saturate(h1, 20%)
+		&:active
+			background darken(h1, 20%)
+
+.b-logo
+	margin-top 15px
+	margin-bottom 10px
+.b-menu
+	background menu
+	&:after
+		content ''
+		display block
+		clear both
+.b-search
+	float right
+	margin-top 5px
+	&__query
+		margin-right 5px
+		color primary
+		border 0
+		background dark
+		padding 7px 10px
+		border-radius 2px
+		box-shadow rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.4) 0 1px 0
+		font-size 12px
+		width 205px
+		vertical-align middle
+		&::-webkit-input-placeholder
+			color #777
+	&__button
+		background transparent
+		color h1
+		border 0
+		font-size 18px
+		position absolute
+		z-index 1
+		margin-top -25px
+		margin-left 195px
+		&:hover
+			color red
+.b-app
+	margin 70px 15px
+	overflow hidden
+	&__logo-big
+		position absolute
+		overflow hidden
+		right 10%
+		z-index -1
+	&__list
+		margin 15px 0 0 30px
 	&__item
-		outline 1px solid silver
+		list-style none
+		font-size 15px
+		line-height 20px
+		font-family primaryFont
+		color primary
+		&:before
+			content '•'
+			position absolute
+			margin-left -20px
+			font-size 25px
+			color link
 
+.b-appstore
+	display block
+	background url('../images/appstore.png') no-repeat
+	height 52px
+	width 154px
+	margin 40px 0 0 0
 
-
-
-.b-bottom
+.b-heading
+	font-family headingFont
+	font-weight normal
+	&__link
+		text-decoration none
+.b-section
+	padding 30px 10px
+.b-product
+	border 1px solid lighten(delimiter, 30%)
+	border-radius 5px
+	padding 10px 70px 10px 10px
+	margin 10px
+	&__text
+		margin-top 10px
+		color primary
+		font-family primaryFont
+		line-height 14px
+		font-size 11px
+	&__img
+		position absolute
+		z-index 1
+		margin-left 70px
+		margin-top -20px
+.b-blog
+	margin-top 30px
+	font-family primaryFont
+	font-size 12px
+	color primary
+	&__info
+		margin-top 10px
+		&__link
+			color link
+			text-decoration underline
+			&:hover
+				color lighten(link, 30%)
+				text-decoration none
+	&__img
+		margin-top 15px
+	&__text
+		line-height 18px
+		margin-top 5px
+.b-about-us
+	font-family primaryFont
+	color primary
+	font-size 12px
+	&__text
+		line-height 18px
+		display inline-block
+		margin 20px 0
+	&__link
+		color link
+		text-decoration underline
+		&:hover
+			text-decoration none
+.b-twit
+	margin 15px 0
+	font-family twitterFont
+	line-height 18px
+	&__link
+		font-size 11px
+		color link
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__text
+		font-size 12px
+		color primary
 .b-footer
-	display none
+	&:before
+		content ''
+		position absolute
+		left 0
+		right 0
+		background dark
+		z-index -1
+		height 70px
+.b-copy
+	float left
+	color primary
+	font-family primaryFont
+	font-size 12px
+	margin 30px 0 0 0
+	&__link
+		color primary
+		text-decoration underline
+		&:hover
+			text-decoration none
+			color lighten(primary, 30%)

@@ -4,81 +4,83 @@ html
 	body
 		.b-container
 			.b-header
-				ul.b-header__nav
+				ul.b-nav
 					each val in ['about us', 'privacy', 'terms', 'contact']
-						li.b-header__nav__item
-							a.b-header__nav__item__link(href='javascript:void(0)')= val
-				form.b-header__login
-					span.b-header__login__title client login
-					input.b-header__login__user(type='text' name='username' placeholder='Username')
-					input.b-header__login__pass(type='text' name='password' placeholder='Password')
-					button.b-header__login__button Go
+						li.b-nav__item
+							a.b-nav__item__link.b-nav__item__link--header(href='javascript:void(0)')= val
+				form.b-login
+					span.b-login__title client login
+					input.b-login__input(type='text' name='username' placeholder='Username')
+					input.b-login__input(type='text' name='password' placeholder='Password')
+					button.b-login__button(type='button' name='login') Go
 
-			.b-main
-				img.b-main__logo(src='images/logo.png' alt='main logo')
-				.b-main__menu
-					ul.b-main__menu__nav
-						each val in ['company', 'products', 'services', 'support', 'partners', 'blog']
-							li.b-main__menu__nav__item
-								a.b-main__menu__nav__item__link(href='javascript:void(0)')= val
-					form.b-main__menu__search
-						input.b-main__menu__search__query(type='text' placeholder='Search our site...')
-						button.b-main__menu__search__button search
-				.b-main__app
-					h1.b-main__app__header myTweetz v2.0
-					ul.b-main__app__params
-						li.b-main__app__params__item Lorem ipsum dolor sit amet, consectetur adipisicing elit
-						li.b-main__app__params__item Tempor incididunt ut labore et dolore magna aliqua
-						li.b-main__app__params__item Quis nostrud exercitation ullamco laboris nisi ut aliquip
-						li.b-main__app__params__item Consequat. Duis aute irure dolor in reprehenderit in voluptate
-						li.b-main__app__params__item Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-					a.b-main__app__link(href='javascript:void(0)')
-						img.b-main__app__link__img(src='images/appstore.png' alt='app store')
+			img.b-logo(src='images/logo.png' alt='main logo')
 
-			.b-delimiter
-			.b-products.i-row
-				h2.b-products__header
-					a.b-products__header__link(href='javascript:void(0)') Products
-				.b-col4
-					.b-products__item
-						h4.b-products__item__header
-							a.b-products__item__header__link(href='javascript:void(0)') iPhone &amp; Ipad Apps
-						p.b-products__item__text Lorem ipsum dolor sit amet.dolor sit amet.
-						img.b-products__item__img(src='images/ipad.png' alt='ipad')
-				.b-col4
-					.b-products__item
-						h4.b-products__item__header
-							a.b-products__item__header__link(href='javascript:void(0)') Blackberry Apps
-						p.b-products__item__text Lorem ipsum dolor sit amet.dolor sit amet.
-						img.b-products__item__img(src='images/bb.png' alt='bbry')
-				.b-col4
-					.b-products__item
-						h4.b-products__item__header
-							a.b-products__item__header__link(href='javascript:void(0)') Windows Phone Apps
-						p.b-products__item__text Lorem ipsum dolor sit amet.dolor sit amet.
-						img.b-products__item__img(src='images/wp.png' alt='winphone')
-				.b-col4
-					.b-products__item
-						h4.b-products__item__header
-							a.b-products__item__header__link(href='javascript:void(0)') Windows PC Apps
-						p.b-products__item__text Lorem ipsum dolor sit amet.dolor sit amet.
-						img.b-products__item__img(src='images/pc.png' alt='pc')
+			.b-menu
+				ul.b-nav
+					each val in ['company', 'products', 'services', 'support', 'partners', 'blog']
+						li.b-nav__item
+							a.b-nav__item__link.b-nav__item__link--menu(href='javascript:void(0)')= val
+				form.b-search
+					input.b-search__query(type='text' placeholder='Search our site...')
+					button.b-search__button(type='button' name='search')
+						i.fa.fa-search
+
+			.b-app
+				img.b-app__logo-big(src='images/logo-big.png')
+				h1.b-heading.i-h1 myTweetz v2.0
+				ul.b-app__list
+					li.b-app__item Lorem ipsum dolor sit amet, consectetur adipisicing elit
+					li.b-app__item Tempor incididunt ut labore et dolore magna aliqua
+					li.b-app__item Quis nostrud exercitation ullamco laboris nisi ut aliquip
+					li.b-app__item Consequat. Duis aute irure dolor in reprehenderit in voluptate
+					li.b-app__item Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				a.b-appstore(href='javascript:void(0)')
 
 			.b-delimiter
-			.b-blog.i-row
-				h2.b-blog__header
-					a.b-blog__header__link(href='javascript:void(0)') From our blog
+			.b-section.i-row
+				h2.b-heading
+					a.b-heading__link.i-h2(href='javascript:void(0)') Products
+				.b-col4
+					.b-product
+						img.b-product__img(src='images/ipad.png' alt='ipad')
+						h4.b-heading
+							a.b-heading__link.i-h4(href='javascript:void(0)') iPhone &amp; Ipad Apps
+						p.b-product__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				.b-col4
+					.b-product
+						img.b-product__img(src='images/bb.png' alt='bbry')
+						h4.b-heading
+							a.b-heading__link.i-h4(href='javascript:void(0)') Blackberry Apps
+						p.b-product__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				.b-col4
+					.b-product
+						img.b-product__img(src='images/wp.png' alt='winphone')
+						h4.b-heading
+							a.b-heading__link.i-h4(href='javascript:void(0)') Windows Phone Apps
+						p.b-product__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				.b-col4
+					.b-product
+						img.b-product__img(src='images/pc.png' alt='pc')
+						h4.b-heading
+							a.b-heading__link.i-h4(href='javascript:void(0)') Windows PC Apps
+						p.b-product__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+			.b-delimiter
+			.b-section.i-row
+				h2.b-heading
+					a.b-heading__link.i-h2(href='javascript:void(0)') From our blog
 				.b-col2
-					.b-blog__item.i-col2--left
-						h3.b-blog__item__header
-							a.b-blog__item__header__link(href='javascript:void(0)') Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						p.b-blog__item__info
+					.b-blog.i-col2--left
+						h3.b-heading
+							a.b-heading__link.i-h3(href='javascript:void(0)') Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						p.b-blog__info
 							| 06/16/2012 by&nbsp;
-							a.b-blog__item__info__link(href='javascript:void(0)') Lorem Ipsum
+							a.b-blog__info__link(href='javascript:void(0)') Lorem Ipsum
 							| &nbsp;in&nbsp;
-							a.b-blog__item__info__link(href='javascript:void(0)') Products
-						img.b-blog__item__img(src='images/blog-1.png' alt='blog 1')
-						p.b-blog__item__text.
+							a.b-blog__info__link(href='javascript:void(0)') Products
+						img.b-blog__img(src='images/blog-1.png' alt='blog 1')
+						p.b-blog__text.
 							sed do eiusmod tempor incididunt ut lab
 							ore et dolore magna aliqua.
 							Ut enim ad minim veniam, quis nostrud e
@@ -86,31 +88,37 @@ html
 							aliquip ex ea commodo consequat. Duis a
 							ute irure dolor in reprehenderit in
 							voluptate velit esse
+							xercitation ullamco laboris nisi ut
+							aliquip ex ea commodo consequat. Duis a
+
 				.b-col2
-					.b-blog__item.i-col2--right
-						h3.b-blog__item__header
-							a.b-blog__item__header__link(href='javascript:void(0)') Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-						p.b-blog__item__info
-							| 06/15/2012 by a&nbsp;
-							a.b-blog__item__info__link(href='javascript:void(0)') First Lastname
+					.b-blog.i-col2--right
+						h3.b-heading
+							a.b-heading__link.i-h3(href='javascript:void(0)') Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+						p.b-blog__info
+							| 06/15/2012 by&nbsp;
+							a.b-blog__info__link(href='javascript:void(0)') First Lastname
 							| &nbsp;in&nbsp;
-							a.b-blog__item__info__link(href='javascript:void(0)') Company
-						img.b-blog__item__img(src='images/blog-2.png' alt='blog 2')
-						p.b-blog__item__text.
-							Lorem ipsum dolor sit amet, consectetur
-							adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore ma
-							gna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco labori
-							s nisi ut aliquip ex ea commodo
+							a.b-blog__info__link(href='javascript:void(0)') Company
+						img.b-blog__img(src='images/blog-2.png' alt='blog 2')
+						p.b-blog__text.
+							sed do eiusmod tempor incididunt ut lab
+							ore et dolore magna aliqua.
+							Ut enim ad minim veniam, quis nostrud e
+							xercitation ullamco laboris nisi ut
+							aliquip ex ea commodo consequat. Duis a
+							ute irure dolor in reprehenderit in
+							voluptate velit esse
+							xercitation ullamco laboris nisi ut
+							aliquip ex ea commodo consequat. Duis a
 
 			.b-delimiter
-			.b-bottom.i-row
+			.b-section.i-row
 				.b-col2
-					.b-bottom__about.i-col2--left
-						h2.b-bottom__about__header
-							a.b-bottom__about__header__link(href='javascript:void(0)') About us
-						p.b-bottom__about__text.
+					.b-about-us.i-col2--left
+						h2.b-heading
+							a.b-heading__link.i-h2(href='javascript:void(0)') About us
+						p.b-about-us__text.
 							Lorem ipsum dolor sit amet, consectetur
 							adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore ma
@@ -123,48 +131,41 @@ html
 							Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia dese
 							runt mollit anim id est laborum.
-						a.b-bottom__about__link(href='javascript:void(0)') Read more
+						a.b-about-us__link(href='javascript:void(0)') Read more
 				.b-col2
-					.b-bottom__twitter.i-col2--right
-						h2.b-bottom__twitter__header
-							a.b-bottom__twitter__header__link(href='javascript:void(0)') Twitter feed
-						.b-bottom__twitter__twit
-							a.b-bottom__twitter__twit__link(href='javascript:void(0)') 1 hour ago
-							p.b-bottom__twitter__twit__text.
+					.i-col2--right
+						h2.b-heading
+							a.b-heading__link.i-h2(href='javascript:void(0)') Twitter feed
+						.b-twit
+							a.b-twit__link(href='javascript:void(0)') 1 hour ago
+							p.b-twit__text.
 								Lorem ipsum dolor sit amet, co
 								nsectetur adipisicing elit, sed
 								do eiusmod tempor incididunt u
 								t labore et dolore magna aliqua.
-						.b-bottom__twitter__twit
-							a.b-bottom__twitter__twit__link(href='javascript:void(0)') 06/21/2012
-							p.b-bottom__twitter__twit__text.
+						.b-twit
+							a.b-twit__link(href='javascript:void(0)') 06/21/2012
+							p.b-twit__text.
 								Ut enim ad minim veniam, qu
 								is nostrud exercitation ullamco
 								laboris nisi ut aliquip ex
-								ea commodo
-						.b-bottom__twitter__twit
-							a.b-bottom__twitter__twit__link(href='javascript:void(0)') 06/19/2012
-							p.b-bottom__twitter__twit__text.
+								ea commodo.
+						.b-twit
+							a.b-twit__link(href='javascript:void(0)') 06/19/2012
+							p.b-twit__text.
 								Excepteur sint occaecat cupida
 								tat non proident,
 								sunt in culpa qui officia dese
 								runt mollit anim id est laborum.
+
 			.b-footer
-				p.b-footer__copy
+				p.b-copy
 					| Copyright © 2012 SomeCorp. All rights Reserved. | &nbsp;
-					a.b-footer__copy__link(href='javascript:void(0)') Disclaimer
+					a.b-copy__link(href='javascript:void(0)') Disclaimer
 					| &nbsp;&amp;&nbsp;
-					a.b-footer__copy__link(href='javascript:void(0)') Privacy Policy
-				ul.b-footer__social
-					li.b-footer__social__item
-						a.b-footer__social__item__link(href='javascript:void(0)')
-							i.b-footer__social__item__link__img.fa.fa-twitter.fa-2x
-					li.b-footer__social__item
-						a.b-footer__social__item__link(href='javascript:void(0)')
-							i.b-footer__social__item__link__img.fa.fa-facebook-square.fa-2x
-					li.b-footer__social__item
-						a.b-footer__social__item__link(href='javascript:void(0)')
-							i.b-footer__social__item__link__img.fa.fa-stumbleupon-circle.fa-2x
-					li.b-footer__social__item
-						a.b-footer__social__item__link(href='javascript:void(0)')
-							i.b-footer__social__item__link__img.fa.fa-vimeo-square.fa-2x
+					a.b-copy__link(href='javascript:void(0)') Privacy Policy
+				ul.b-nav.b-nav--social
+					each val in ['twitter', 'facebook-square', 'stumbleupon-circle', 'vimeo-square']
+						li.b-nav__item
+							a.b-nav__item__link.b-nav__item__link--social(href='javascript:void(0)')
+								i.fa(class='fa-'+val)

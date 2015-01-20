@@ -70,7 +70,7 @@
   });
 
   gulp.task('watch', function() {
-    gulp.watch('./jade/*.jade', ['jade']);
+    gulp.watch('./jade/**/*.jade', ['jade']);
     gulp.watch('./stylus/*.styl', ['stylus']);
     gulp.watch('./coffee/*.coffee', ['coffee']);
     return gulp.watch('./images/*', ['images']);

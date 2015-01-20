@@ -76,7 +76,7 @@ gulp.task 'coffee', ->
 		.pipe do connect.reload
 
 gulp.task 'watch', ->
-	gulp.watch './jade/*.jade', ['jade']
+	gulp.watch './jade/**/*.jade', ['jade']
 	gulp.watch './stylus/*.styl', ['stylus']
 	gulp.watch './coffee/*.coffee', ['coffee']
 	gulp.watch './images/*', ['images']

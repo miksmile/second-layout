@@ -6,6 +6,7 @@
   ],
   "dependencies": {
     "fontawesome": "latest",
+    "competent-meyerweb-reset": "~2.0.20110126",
     "normalize.css": "~3.0.2"
   },
   "license": "Apache License 2.0",
